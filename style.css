@@ -110,21 +110,14 @@ button:hover {
   width: 200px;
 } */
 @media (max-width: 768px) {
-  /* Change font size for smaller screens */
-
-  /* width */
   ::-webkit-scrollbar {
     width: 0px;
   }
-
-  /* Track */
   ::-webkit-scrollbar-track {
     background: transparent;
   }
-
-  /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #222;
+    background: transparent;
   }
   html,
   body {
@@ -137,16 +130,6 @@ button:hover {
     overflow-x: hidden;
     overflow-y: scroll;
   }
-
-  /* #dark-mode-btn {
-    font-size: 1.3em;
-    position: absolute;
-    top: -12px;
-    right: -5px;
-    height: 25px;
-    width: 80px;
-  } */
-
   .final {
     width: 70%;
   }

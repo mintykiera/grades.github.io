@@ -219,20 +219,3 @@ document.getElementById('submit-btn').addEventListener('click', function () {
   }
   clearContent();
 });
-
-// // Create a button element for toggle
-// const darkModeBtn = document.getElementById('dark-mode-btn');
-// darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
-// document.body.appendChild(darkModeBtn);
-
-// // Add event listener to toggle dark mode
-// darkModeBtn.addEventListener('click', () => {
-//   // toggle class on body
-//   document.body.classList.toggle('dark-mode');
-//   // update icon based on current theme
-//   if (document.body.classList.contains('dark-mode')) {
-//     darkModeBtn.innerHTML = `<i class="fas fa-sun"></i>`;
-//   } else {
-//     darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
-//   }
-// });
