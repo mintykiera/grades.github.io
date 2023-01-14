@@ -99,44 +99,53 @@ button:hover {
   font-family: var(--font);
   color: var(--body-color);
   border: 1px solid var(--body-color);
+  cursor: pointer;
 }
 #dark-mode-btn {
   font-size: 1.3em;
   position: absolute;
-  top: 25px;
-  right: -120px;
-  height: 70px;
-  width: 140px;
-  transition: right 0.5s ease-in-out;
-}
-#dark-mode-btn:hover {
-  position: absolute;
-  top: 25px;
+  top: -2px;
   right: -5px;
-  height: 70px;
-  width: 140px;
-  transition: right 0.5s ease-in-out;
+  height: 35px;
+  width: 200px;
 }
 @media (max-width: 768px) {
   /* Change font size for smaller screens */
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #222;
+  }
   html,
   body {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
     font-size: 0.7rem;
     text-align: center;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    overflow-y: scroll;
   }
 
-  /* #dark-mode-btn {
-    font-size: 1.5em;
+  #dark-mode-btn {
+    font-size: 1.3em;
     position: absolute;
-    top: 25px;
-    right: -120px;
-    height: 35px;
-    width: 70px;
-    transition: right 0.5s ease-in-out;
-  } */
+    top: -12px;
+    right: -5px;
+    height: 25px;
+    width: 80px;
+  }
 
   .final {
     width: 70%;
