@@ -9,12 +9,21 @@ html,
 body {
   height: 100%;
   user-select: none;
+  overflow: hidden;
 }
 body {
   margin: 0;
   font-family: var(--font);
   color: var(--font-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+/* Dark mode styles */
+.dark-mode {
+  background-color: var(--font-color);
+  color: var(--body-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 .container {
   height: 100%;
   padding: 0;
@@ -64,8 +73,17 @@ input[type='text'] {
   border: 0px;
   border-bottom: 1px solid var(--font-color);
   text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
+.dark-mode input[type='text'] {
+  background-color: var(--font-color);
+  color: var(--body-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border-bottom: 1px solid var(--body-color);
+}
+input[type='text']:focus {
+  outline: none;
+}
 button {
   background: white;
   font-family: var(--font);
@@ -74,9 +92,75 @@ button {
   width: 150px;
   margin: 0 auto;
   font-size: 0.7em;
+  border: 1px solid var(--font-color);
 }
 button:hover {
-  background: black;
+  background: var(--font-color);
   font-family: var(--font);
   color: var(--body-color);
+  border: 1px solid var(--body-color);
+}
+#dark-mode-btn {
+  font-size: 1.3em;
+  position: absolute;
+  top: 25px;
+  right: -120px;
+  height: 70px;
+  width: 140px;
+  transition: right 0.5s ease-in-out;
+}
+#dark-mode-btn:hover {
+  position: absolute;
+  top: 25px;
+  right: -5px;
+  height: 70px;
+  width: 140px;
+  transition: right 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  /* Change font size for smaller screens */
+  html,
+  body {
+    font-size: 0.7rem;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* #dark-mode-btn {
+    font-size: 1.5em;
+    position: absolute;
+    top: 25px;
+    right: -120px;
+    height: 35px;
+    width: 70px;
+    transition: right 0.5s ease-in-out;
+  } */
+
+  .final {
+    width: 70%;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  label {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+  }
+
+  /* Make the input fields smaller */
+  input[type='text'] {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Center the submit button */
+  button {
+    margin: 10px auto;
+  }
 }

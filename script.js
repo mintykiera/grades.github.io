@@ -10,6 +10,44 @@ document.getElementById('submit-btn').addEventListener('click', function () {
   var mapeh = document.getElementById('mapeh').value.toUpperCase();
   var comp = document.getElementById('comp').value.toUpperCase();
 
+  // validate user input
+  if (!/^(A|P|B|E|AP)$/.test(fil)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(eng)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(math)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(sci)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(ap)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(clve)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(tle)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(mapeh)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+  if (!/^(A|P|B|E|AP)$/.test(comp)) {
+    alert('Invalid input, please use a valid letter grade.');
+    return;
+  }
+
   // Check for missing grades
   if (
     fil == '' ||
@@ -160,4 +198,21 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     });
   }
   clearContent();
+});
+
+// Create a button element for toggle
+const darkModeBtn = document.getElementById('dark-mode-btn');
+darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
+document.body.appendChild(darkModeBtn);
+
+// Add event listener to toggle dark mode
+darkModeBtn.addEventListener('click', () => {
+  // toggle class on body
+  document.body.classList.toggle('dark-mode');
+  // update icon based on current theme
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeBtn.innerHTML = `<i class="fas fa-sun"></i>`;
+  } else {
+    darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
+  }
 });
