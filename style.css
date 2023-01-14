@@ -18,11 +18,11 @@ body {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 /* Dark mode styles */
-.dark-mode {
+/* .dark-mode {
   background-color: var(--font-color);
   color: var(--body-color);
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
+} */
 
 .container {
   height: 100%;
@@ -101,14 +101,14 @@ button:hover {
   border: 1px solid var(--body-color);
   cursor: pointer;
 }
-#dark-mode-btn {
+/* #dark-mode-btn {
   font-size: 1.3em;
   position: absolute;
   top: -2px;
   right: -5px;
   height: 35px;
   width: 200px;
-}
+} */
 @media (max-width: 768px) {
   /* Change font size for smaller screens */
 
@@ -138,14 +138,14 @@ button:hover {
     overflow-y: scroll;
   }
 
-  #dark-mode-btn {
+  /* #dark-mode-btn {
     font-size: 1.3em;
     position: absolute;
     top: -12px;
     right: -5px;
     height: 25px;
     width: 80px;
-  }
+  } */
 
   .final {
     width: 70%;

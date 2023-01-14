@@ -11,39 +11,39 @@ document.getElementById('submit-btn').addEventListener('click', function () {
   var comp = document.getElementById('comp').value.toUpperCase();
 
   // validate user input
-  if (!/^(A|P|B|E|AP)$/.test(fil)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(fil)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(eng)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(eng)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(math)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(math)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(sci)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(sci)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(ap)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(ap)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(clve)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(clve)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(tle)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(tle)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(mapeh)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(mapeh)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
-  if (!/^(A|P|B|E|AP)$/.test(comp)) {
+  if (!/^(A|P|B|E|AP|IE)$/.test(comp)) {
     alert('Invalid input, please use a valid letter grade.');
     return;
   }
@@ -70,6 +70,7 @@ document.getElementById('submit-btn').addEventListener('click', function () {
   var AP = Math.floor(Math.random() * (89 - 85 + 1)) + 85;
   var E = Math.floor(Math.random() * (84 - 80 + 1)) + 80;
   var B = Math.floor(Math.random() * (79 - 75 + 1)) + 75;
+  var IE = Math.floor(Math.random() * (74 - 70 + 1)) + 70;
 
   // Collect number values for letter grades
   var numGrades = [];
@@ -83,6 +84,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (fil == 'B') {
     numGrades.push(B);
+  } else if (fil == 'IE') {
+    numGrades.push(IE);
   }
   if (eng == 'A') {
     numGrades.push(A);
@@ -94,6 +97,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (eng == 'B') {
     numGrades.push(B);
+  } else if (eng == 'IE') {
+    numGrades.push(IE);
   }
   if (math == 'A') {
     numGrades.push(A);
@@ -105,6 +110,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (math == 'B') {
     numGrades.push(B);
+  } else if (math == 'IE') {
+    numGrades.push(IE);
   }
   if (sci == 'A') {
     numGrades.push(A);
@@ -116,7 +123,10 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (sci == 'B') {
     numGrades.push(B);
+  } else if (sci == 'IE') {
+    numGrades.push(IE);
   }
+
   if (ap == 'A') {
     numGrades.push(A);
   } else if (ap == 'P') {
@@ -127,6 +137,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (ap == 'B') {
     numGrades.push(B);
+  } else if (ap == 'IE') {
+    numGrades.push(IE);
   }
   if (clve == 'A') {
     numGrades.push(A);
@@ -138,6 +150,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (clve == 'B') {
     numGrades.push(B);
+  } else if (clve == 'IE') {
+    numGrades.push(IE);
   }
   if (tle == 'A') {
     numGrades.push(A);
@@ -149,6 +163,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (tle == 'B') {
     numGrades.push(B);
+  } else if (tle == 'IE') {
+    numGrades.push(IE);
   }
   if (mapeh == 'A') {
     numGrades.push(A);
@@ -160,6 +176,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (mapeh == 'B') {
     numGrades.push(B);
+  } else if (mapeh == 'IE') {
+    numGrades.push(IE);
   }
   if (comp == 'A') {
     numGrades.push(A);
@@ -171,6 +189,8 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     numGrades.push(E);
   } else if (comp == 'B') {
     numGrades.push(B);
+  } else if (comp == 'IE') {
+    numGrades.push(IE);
   }
   // Find general average
   var sum = 0;
@@ -200,19 +220,19 @@ document.getElementById('submit-btn').addEventListener('click', function () {
   clearContent();
 });
 
-// Create a button element for toggle
-const darkModeBtn = document.getElementById('dark-mode-btn');
-darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
-document.body.appendChild(darkModeBtn);
+// // Create a button element for toggle
+// const darkModeBtn = document.getElementById('dark-mode-btn');
+// darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
+// document.body.appendChild(darkModeBtn);
 
-// Add event listener to toggle dark mode
-darkModeBtn.addEventListener('click', () => {
-  // toggle class on body
-  document.body.classList.toggle('dark-mode');
-  // update icon based on current theme
-  if (document.body.classList.contains('dark-mode')) {
-    darkModeBtn.innerHTML = `<i class="fas fa-sun"></i>`;
-  } else {
-    darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
-  }
-});
+// // Add event listener to toggle dark mode
+// darkModeBtn.addEventListener('click', () => {
+//   // toggle class on body
+//   document.body.classList.toggle('dark-mode');
+//   // update icon based on current theme
+//   if (document.body.classList.contains('dark-mode')) {
+//     darkModeBtn.innerHTML = `<i class="fas fa-sun"></i>`;
+//   } else {
+//     darkModeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
+//   }
+// });
