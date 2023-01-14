@@ -25,7 +25,12 @@ body {
 }
 h2 {
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+  font-size: 0.65em;
+  opacity: 70%;
 }
 .final {
   font-size: var(--size);
@@ -60,6 +65,7 @@ input[type='text'] {
   border-bottom: 1px solid var(--font-color);
   text-transform: uppercase;
 }
+
 button {
   background: white;
   font-family: var(--font);
